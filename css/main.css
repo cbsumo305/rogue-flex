@@ -67,18 +67,20 @@ header h1 span {
 }
 
 header nav {
-	/*padding: 46px 0;*/
+	text-align: center;
+	width: 100%;
 }
 header nav ul {
 	margin: 0;
-	padding: 0;
+	padding: 10px 0;
 }
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: .875em;
-	/*padding: 0 10px;*/
-	display: inline;
+	padding: 10px 0;
+	display: inline-block;
+	width: 100%;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -103,8 +105,6 @@ header nav ul li a{
 	border-bottom: 3px solid #77a466;
 }
 
-.main-title {
-}
 .main-title h2 {
 	text-align: left;
 	padding: 5px 0;
@@ -176,19 +176,49 @@ footer span {
 
 /*TABLET*/
 @media (min-width: 768px) {
+	.bottom-section {
+		align-items: stretch;
+	}
+
 	.section-one,
 	.section-two,
 	.section-three {
-		width: 33%;
+		/*width: 33%;*/
+		flex-basis: 30%;
+		flex-grow: 3;
 	}
 
 	.section-two {
 		border-left: 1px solid #eee;
 		border-right: 1px solid #eee;
 	}
+
+	.section-two, .section-three {
+		padding: 0 15px;
+	}
 }
 
 /*DESKTOP*/
 @media (min-width: 1200px) {
+	header {
+		justify-content:  space-between;
+	}
 
+	header h1 {
+		width: 50%;
+		padding: 16px 0;
+		border-bottom: none;
+		text-align: left;
+	}
+
+	header nav {
+		text-align: right;
+		width: 50%;
+	}
+
+	header nav ul li {
+		display: inline;
+		padding-left: 15px;
+		width: auto;
+	}
 }
